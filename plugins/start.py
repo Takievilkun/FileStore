@@ -1,5 +1,5 @@
 import os
-import asyncio, AUTO_DELETE
+import asyncio, 
 from pyrogram import Client, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -9,9 +9,6 @@ from config import *
 from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
-codeflixbots = FILE_AUTO_DELETE
-subaru = codeflixbots
-file_auto_delete = AUTO_DELETE.naturaldelta(subaru)
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
